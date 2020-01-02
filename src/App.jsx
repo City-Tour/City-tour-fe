@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 //Importing Components
 import Landing from './components/Landing/'
+import NavBar from './components/NavBar/'
 
 function App() {
   
@@ -13,8 +14,8 @@ function App() {
   return (
     <main>
       
-   Hello We are up
-     <Landing/>
+    <NavBar/>
+    <Landing/>
     </main>
   );
 }

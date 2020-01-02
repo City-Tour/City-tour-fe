@@ -1,4 +1,10 @@
 .cities{
     padding:0rem 1.5rem;
-    text-align:center;
+}
+.city{
+    display:flex;
+    flex-direction: column;
+}
+.city-image{
+    border-radius:4rem;
 }
