@@ -13,20 +13,26 @@ import SignUp from './components/Signup/'
 import CityPage from './components/CityPage/'
 import Packages from './components/Packages'
 import User from './components/User'
+import AddPackage from './components/Forms/AddPackageForm'
 
 function App() {
+  const[user,setUser]=useState()
+  const user_id = id => {
+    setUser(id)
+  }
   return (
     <main>
-      <AuthContext.Provider>
+      <AuthContext.Provider value={{user_id,user}}>
         <Router>
           <NavBar />
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={SignUp} />
-            <Route path="/packages/:id" component={Packages} />
+            <Route path ="/packages/add" component={AddPackage}/>
             <Route path="/user" component={User} />
             <Route path="/:id" component={CityPage} />
+            <Route path="/packages/:id" component={Packages} />
           </Switch>
         </Router>
       </AuthContext.Provider>
