@@ -22,7 +22,6 @@
 .suggestion .category-container .category-suggestion .top-half {
   width: auto;
   height: 200px;
-  background-image: url(../assets/nashville/Nashville.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;

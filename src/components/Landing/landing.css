@@ -2,12 +2,23 @@ h2 {
   font-family: "Poppins", sans-serif !important;
 }
 .cities {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 10px;
   padding: 0rem 1.5rem;
 }
+.city-container {
+  width: 33%;
+  background-color: rgba(255, 255, 255, 0.701);
+}
 .city {
+  margin: 10px;
   display: flex;
   flex-direction: column;
 }
-.city-image {
-  border-radius: 4rem;
+.button-text {
+  color: white;
+}
+.button-text:hover {
+  color: white;
 }
