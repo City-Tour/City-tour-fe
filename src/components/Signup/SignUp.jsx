@@ -70,3 +70,4 @@ import './SignUp.scss'
   }
    
   export default withRouter(SignUp);
+  //some code
