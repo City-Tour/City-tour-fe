@@ -13,6 +13,13 @@ const cities = [
   austin
   
 ]
+
+//Dynamic Render will require useEffect to fetch latest list of cities on render
+//Save list to useState and render, it will re-trigger render on component loads
+
+//Each City button for view packages will use history props to swtich CityPage component by passing city_id as params
+
+
 const Landing = props => (
   <>
     <section className="cities">
