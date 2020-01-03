@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { withRouter } from 'react-router-dom'
 import { axiosWithAuth } from '../../utils/axiosWithAuth'
 import { Button, Form, Grid, Segment, h3 } from 'semantic-ui-react'
 import { useForm } from 'react-hook-form'
+import {AuthContext} from '../Contexts/AuthContext'
 import './Login.scss'
 const Login = props => {
+  const {user_id} = useContext(AuthContext)
   const { handleSubmit, register, errors } = useForm()
   // const onLoginSubmit = data => console.log(data);
   const onLoginSubmit = data => {
@@ -12,6 +14,7 @@ const Login = props => {
       .post('/login', data)
       .then(res => {
         console.log(res.data)
+        user_id(res.data.user_id)
         localStorage.setItem('token', res.data.token)
         // props.history.push('/packages')
       })

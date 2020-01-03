@@ -15,9 +15,13 @@ import Packages from './components/Packages'
 import User from './components/User'
 
 function App() {
+  const[user,setUser]=useState()
+  const user_id = id => {
+    setUser(id)
+  }
   return (
     <main>
-      <AuthContext.Provider>
+      <AuthContext.Provider value={{user_id,user}}>
         <Router>
           <NavBar />
           <Switch>

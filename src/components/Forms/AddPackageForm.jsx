@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { axiosWithAuth } from '../../utils/axiosWithAuth'
 import { withRouter } from 'react-router-dom'
 import { Button, Form, Grid, Segment} from 'semantic-ui-react'
 import { useForm } from 'react-hook-form'
+import {AuthContext} from '../Contexts/AuthContext'
 
 const AddPackage = () => {
+    const {user} = useContext(AuthContext)
+    console.log("User id inside Add Package: ",user)
     const { handleSubmit, register, errors } = useForm()
     const onSubmit = data => {
         axiosWithAuth()
