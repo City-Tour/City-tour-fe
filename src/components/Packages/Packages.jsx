@@ -24,11 +24,14 @@ const Packages = props => {
   return (
     <>
       <div>
-        <h1>Suggestions</h1>
-        <div>
+        <div className="suggestion-container">
           {suggestions.map(sug => (
-            <div>
-            <h1>{sug.name}</h1>
+            <div className="type-container">
+              <h1>{sug.type}</h1>
+              <h2>{sug.name}</h2>
+              <p className="description">{sug.description}</p>
+              <a href={sug.website}>{sug.website}</a>
+              <p className="address">{sug.address}</p>
             </div>
           ))}
         </div>
