@@ -10,45 +10,46 @@ const AddPackage = () => {
     console.log("User id inside Add Package: ",user)
     const { handleSubmit, register, errors } = useForm()
     const onSubmit = data => {
-        axiosWithAuth()
-          .post('/register', data)
-          .then(res => {
-            console.log(res.data)
-    
-            // props.history.push('/packages')
-          })
-          .catch(err => console.log(err))
+
+            data.creator_id = user
+            console.log('attached user id',data)
       }
-    return (<section className="signup">
+    return (<section className="add-package">
     <Segment placeholder>
       <Grid columns={1} relaxed="very" stackable>
         <Grid.Column verticalAlign="middle">
-          <h2>Sign Up for City Tour Account for Free</h2>
+          <h2>Create a new Tour Package</h2>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Field>
               <input
                 type="text"
-                placeholder="First name"
-                name="first_name"
+                placeholder="Package Name"
+                name="name"
                 ref={register({ required: true, maxLength: 80 })}
               />
               <input
                 type="text"
-                placeholder="Last name"
-                name="last_name"
+                placeholder="Type of Package"
+                name="type"
                 ref={register({ required: true, maxLength: 80 })}
               />
               <input
-                type="password"
-                placeholder="Password"
-                name="password"
+                type="text"
+                placeholder="Description for your Package"
+                name="description"
                 ref={register({ required: true, maxLength: 80 })}
               />
               <input
-                type="email"
-                placeholder="Email"
-                name="email"
+                type="number"
+                placeholder="Price for the Package"
+                name="price"
                 ref={register({ required: true, maxLength: 80 })}
+                />
+      <select name="Choose City" ref={register({ required: true })}>
+        <option value="Nashville">Nashville</option>
+        <option value=" San Francisco"> San Francisco</option>
+        <option value=" Austin"> Austin</option>
+      </select>
               />
             </Form.Field>
             <Button type="submit">Submit</Button>
