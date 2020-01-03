@@ -1,5 +1,6 @@
 import React from "react";
 import {withRouter} from 'react-router-dom'
+import {axiosWithAuth} from '../../utils/axiosWithAuth'
 import {
   Button,
   Form,
@@ -11,7 +12,23 @@ import { useForm } from "react-hook-form";
 import './Login.scss'
 const Login = props => {
   const { handleSubmit, register, errors } = useForm();
-  const onLoginSubmit = data => console.log(data);
+  // const onLoginSubmit = data => console.log(data);
+  const onLoginSubmit = data => {
+    
+    axiosWithAuth()
+    .post('/login', data)
+    .then(res => {
+      console.log(res.data);
+        localStorage.setItem('token', res.data.token);
+        // props.history.push('/packages')
+
+    })
+    .catch(err => console.log(err))
+   }
+  
+
+
+
   
   return (
     <section className='login'>
@@ -26,13 +43,13 @@ const Login = props => {
           <input 
               type="email" 
               placeholder="Email" 
-              name="Email" 
+              name="email" 
               ref={register({required: true, maxLength: 80})}
               />
           <input 
               type="password" 
               placeholder="Password" 
-              name="Password"
+              name="password"
               ref={register({required: true, maxLength: 80})} />
               </Form.Field>
             <Button type="submit" content="Login" primary />

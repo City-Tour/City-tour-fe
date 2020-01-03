@@ -1,4 +1,5 @@
 import React from 'react'
+import {axiosWithAuth} from '../../utils/axiosWithAuth'
 import {withRouter} from 'react-router-dom'
 import {
     Button,
@@ -11,7 +12,19 @@ import {
 import './SignUp.scss'
   const SignUp = () => {
     const { handleSubmit, register, errors } = useForm();
-    const onSignUpSubmit = data => console.log(data);
+
+    const onSignUpSubmit = data => {
+      axiosWithAuth()
+    .post('/register', data)
+    .then(res => {
+      console.log(res.data);
+        
+        // props.history.push('/packages')
+
+    })
+    .catch(err => console.log(err))
+   }
+    
 
       return (
       <section className="signup">    
@@ -26,24 +39,24 @@ import './SignUp.scss'
           <input 
           type="text" 
           placeholder="First name" 
-          name="First name"
+          name="first_name"
           ref={register({required: true, maxLength: 80})}
           />
           <input 
           type="text" 
           placeholder="Last name" 
-          name="Last name"
+          name="last_name"
           ref={register({required: true, maxLength: 80})}
           />
           <input 
           type="password" 
           placeholder="Password" 
-          name="Password" 
+          name="password" 
           ref={register({required: true, maxLength: 80})}/>
           <input 
           type="email" 
           placeholder="Email" 
-          name="Email"
+          name="email"
           ref={register({required: true, maxLength: 80})} 
           />
         </Form.Field>
@@ -57,3 +70,4 @@ import './SignUp.scss'
   }
    
   export default withRouter(SignUp);
+  //some code
