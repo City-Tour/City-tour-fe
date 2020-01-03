@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios"
 import { Grid, Image, Header, Segment, Divider, Button } from "semantic-ui-react";
 import nashville from '../assets/nashville.jpg'
 import sansFrancisco from '../assets/losangeles.jpg'
