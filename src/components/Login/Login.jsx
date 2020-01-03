@@ -1,47 +1,65 @@
 import React from "react";
 import {withRouter} from 'react-router-dom'
+import {axiosWithAuth} from '../../utils/axiosWithAuth'
 import {
   Button,
-  Divider,
   Form,
   Grid,
   Segment,
-  Header
+  h3
 } from "semantic-ui-react";
 import { useForm } from "react-hook-form";
-
+import './Login.scss'
 const Login = props => {
   const { handleSubmit, register, errors } = useForm();
-  const onLoginSubmit = data => console.log(data);
+  // const onLoginSubmit = data => console.log(data);
+  const onLoginSubmit = data => {
+    
+    axiosWithAuth()
+    .post('/login', data)
+    .then(res => {
+      console.log(res.data);
+        localStorage.setItem('token', res.data.token);
+        // props.history.push('/packages')
+
+    })
+    .catch(err => console.log(err))
+   }
+  
+
+
+
   
   return (
-    <Segment placeholder>
+    <section className='login'>
+    <Segment placeholder >
       <Grid columns={1} relaxed="very" stackable>
         <Grid.Column>
-          <Header textAlign="center" size="large">
+          <h3>
             Login to your account
-          </Header>
+          </h3>
           <Form onSubmit={handleSubmit(onLoginSubmit)}>
             <Form.Field>
           <input 
               type="email" 
               placeholder="Email" 
-              name="Email" 
+              name="email" 
               ref={register({required: true, maxLength: 80})}
               />
           <input 
               type="password" 
               placeholder="Password" 
-              name="Password"
+              name="password"
               ref={register({required: true, maxLength: 80})} />
               </Form.Field>
             <Button type="submit" content="Login" primary />
           </Form>
-          <Header textAlign="center" size="small">If you don't have an account, make an account for free</Header>
+          <h3>If you don't have an account, make an account for free</h3>
           <Button onClick={()=>props.history.push('/signup')}>Sign Up!</Button>
         </Grid.Column>
     </Grid>
     </Segment>
+    </section>
   );
 };
 

@@ -15,7 +15,7 @@ const NavBar = (props) => {
         <section>
         <div className="account-login-logout">
             <Button.Group color='blue' basic>
-                <Button>My Purchases</Button>
+                <Button onClick={()=>props.history.push('/user')}>My account</Button>
                 <Button onClick={() => props.history.push('/login')}>Login / Sign Up</Button>
             </Button.Group>
         </div>

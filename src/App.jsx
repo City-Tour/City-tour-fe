@@ -12,6 +12,7 @@ import Login from "./components/Login/";
 import SignUp from "./components/Signup/";
 import CityPage from "./components/CityPage/";
 import Packages from "./components/Packages";
+import User from "./components/User";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/signup" component={SignUp} />
             <Route path="/packages" component={Packages} />
+            <Route path="/user" component={User} />
             <Route path="/:id" component={CityPage} />
           </Switch>
         </Router>
