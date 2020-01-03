@@ -1,6 +1,17 @@
 import React from "react";
 import { Grid, Image, Header, Segment, Divider, Button } from "semantic-ui-react";
+import nashville from '../assets/nashville.jpg'
+import sansFrancisco from '../assets/losangeles.jpg'
+import austin from '../assets/boston.jpg'
 import "./landing.scss";
+
+const cities = [
+  '',
+  nashville,
+  sansFrancisco,
+  austin
+  
+]
 const Landing = props => (
   <>
     <section className="cities">
@@ -8,7 +19,7 @@ const Landing = props => (
         <Grid.Row>
           <Grid.Column>
           <Segment className='city'>
-          <Image src={require("../assets/newyork.jpg")} className='city-image'/>
+          <Image src={cities[1]} alt='city pics' className='city-image'/>
             <Header size="huge">
               New York City
             </Header>
