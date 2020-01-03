@@ -1,7 +1,7 @@
 import React from 'react'
 import { axiosWithAuth } from '../../utils/axiosWithAuth'
 import { withRouter } from 'react-router-dom'
-import { Button, Form, Grid, Segment, h2 } from 'semantic-ui-react'
+import { Button, Form, Grid, Segment} from 'semantic-ui-react'
 import { useForm } from 'react-hook-form'
 import './SignUp.scss'
 const SignUp = () => {
