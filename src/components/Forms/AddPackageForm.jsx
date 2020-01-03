@@ -5,11 +5,11 @@ import { Button, Form, Grid, Segment } from 'semantic-ui-react'
 import { useForm } from 'react-hook-form'
 import { AuthContext } from '../Contexts/AuthContext'
 
-const AddPackage = () => {
+const AddPackage = (props) => {
   const { user } = useContext(AuthContext)
   const { handleSubmit, register, errors } = useForm()
   const onSubmit = data => {
-    data.price = parseInt(data.price)
+    data.price = parseFloat(data.price)
     data.creator_id = user
     if(data.city_id === "Nashville"){
         data.city_id = 1
@@ -22,7 +22,8 @@ const AddPackage = () => {
     }
     console.log(data)
     axiosWithAuth().post('/packages',data)
-    .then(res=> console.log(res.data))
+    .then(res=> {console.log(res.data)
+    props.history.push(`/${data.city_id}`)})
     .catch(err=> console.log(err))
   }
   return (
@@ -51,7 +52,7 @@ const AddPackage = () => {
                   ref={register({ required: true, maxLength: 80 })}
                 />
                 <input
-                  type="number"
+                  type="text"
                   placeholder="Price for the Package"
                   name="price"
                   ref={register({ required: true, maxLength: 80 })}
