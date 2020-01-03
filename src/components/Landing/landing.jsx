@@ -14,7 +14,7 @@ const Landing = props => (
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
-              <Button size ="massive" color='blue'>Purchase</Button>
+              <Button size ="massive" color='blue'>View Packages</Button>
             </Segment>
           </Grid.Column>
           <Grid.Column>
@@ -25,7 +25,7 @@ const Landing = props => (
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
-              <Button size ="massive" color='blue'>Purchase</Button>
+              <Button size ="massive" color='blue'>View Packages</Button>
             </Segment>
           </Grid.Column>
           <Grid.Column>
@@ -36,7 +36,7 @@ const Landing = props => (
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
-              <Button size ="massive" color='blue'>Purchase</Button>
+              <Button size ="massive" color='blue'>View Packages</Button>
             </Segment>
           </Grid.Column>
         </Grid.Row>
@@ -50,7 +50,7 @@ const Landing = props => (
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
-              <Button size ="massive" color='blue'>Purchase</Button>
+              <Button size ="massive" color='blue'>View Packages</Button>
             </Segment>
           </Grid.Column>
           <Grid.Column>
@@ -61,7 +61,7 @@ const Landing = props => (
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
-              <Button size ="massive" color='blue'>Purchase</Button>
+              <Button size ="massive" color='blue'>View Packages</Button>
             </Segment>
           </Grid.Column>
           <Grid.Column>
@@ -72,7 +72,7 @@ const Landing = props => (
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
-              <Button size ="massive" color='blue'>Purchase</Button>
+              <Button size ="massive" color='blue'>View Packages</Button>
             </Segment>
           </Grid.Column>
         </Grid.Row>

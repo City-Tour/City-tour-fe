@@ -8,6 +8,7 @@ import 'semantic-ui-css/semantic.min.css'
 import Landing from './components/Landing/'
 import NavBar from './components/NavBar/'
 import Login from './components/Login/'
+import SignUp from './components/Signup/SignUp';
 function App() {
   
 
@@ -17,7 +18,8 @@ function App() {
     <NavBar/>
     <Switch>
     <Route exact path="/" component={Landing}/>
-    <Route path='/login' component={Login}/>    
+    <Route path='/login' component={Login}/> 
+    <Route path='/signup' component={SignUp}/>   
     </Switch>
     </main>
     </Router>
