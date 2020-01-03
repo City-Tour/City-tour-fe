@@ -17,9 +17,7 @@ useEffect(()=>{
 },[props.match.params.id])
     
     return ( 
-        <div className='city-wrapper'>
-            <h1></h1>
-            
+        <div className='city-wrapper'>            
         </div>
      );
 }

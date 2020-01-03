@@ -3,14 +3,13 @@ import {axiosWithAuth} from '../../utils/axiosWithAuth'
 import {withRouter} from 'react-router-dom'
 import {
     Button,
-    Divider,
     Form,
     Grid,
     Segment,
-    Header
+    h2
   } from "semantic-ui-react";
   import { useForm } from "react-hook-form";
-
+import './SignUp.scss'
   const SignUp = () => {
     const { handleSubmit, register, errors } = useForm();
 
@@ -25,15 +24,16 @@ import {
     })
     .catch(err => console.log(err))
    }
-    }
+    
 
-      return (        
+      return (
+      <section className="signup">    
       <Segment placeholder>
           <Grid columns={1} relaxed="very" stackable>
       <Grid.Column verticalAlign="middle">
-      <Header textAlign="center" size="large">
+      <h2>
         Sign Up for City Tour Account for Free
-      </Header>
+      </h2>
       <Form onSubmit={handleSubmit(onSignUpSubmit)}>
         <Form.Field>
           <input 
@@ -65,6 +65,7 @@ import {
     </Grid.Column>
   </Grid>
   </Segment>
+  </section>  
   );
   }
    
