@@ -7,8 +7,10 @@ const NavBar = props => {
     <nav>
       <section onClick={() => props.history.push('/')}>
         <div className="logo-header">
-          <Image src={require('../assets/citytour.png')} size="small" />
-          <h2>City Tour </h2>
+          <Image
+            src={require('../assets/output-onlinepngtools.png')}
+            size="small"
+          />
         </div>
         <h3 className="sub-header">Explore cities like a local</h3>
       </section>
