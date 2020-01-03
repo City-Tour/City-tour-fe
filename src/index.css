@@ -2,7 +2,7 @@ body {
   background: linear-gradient(
     0deg,
     #a01839 0%,
-    #c64343 23%,
+    #c64343 26%,
     #fff calc(20% + 1px),
     #fff 60%,
     #fff calc(60% + 1px),
@@ -12,7 +12,7 @@ body {
   );
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

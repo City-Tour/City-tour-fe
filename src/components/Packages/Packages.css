@@ -1,43 +1,39 @@
-.suggestions-container {
+.suggestion-container {
   display: flex;
-  justify-content: space-between;
-}
-.suggestion {
-  width: 33%;
-  min-height: 85vh;
-  height: 100%;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
-  margin: 0 1%;
-}
-.suggestion .category-header {
-  margin: 1%;
-}
-.suggestion .category-container .category-suggestion {
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
-  min-height: 33vh;
 }
-.suggestion .category-container .category-suggestion .top-half {
-  width: auto;
-  height: 200px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-between;
-}
-.suggestion .category-container .category-suggestion .top-half h3 {
-  width: 100%;
-  padding: 20px 30px;
-  height: 35px;
-}
-.suggestion .category-container .bottom-half {
-  padding: 40px 20px;
+.type-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  width: 32%;
+  padding: 4%;
+  background-color: rgba(255, 255, 255, 0.797);
 }
-.suggestion .category-container .bottom-half p {
-  padding: 15px 0;
+.type-container:hover {
+  transition: box-shadow 0.5s ease-in;
+  box-shadow: 0px 0px 31px 3px rgba(133, 133, 133, 0.28);
+}
+.type-container h1 {
+  color: #c64343;
+  margin-right: 10%;
+  border-bottom: 1px solid black;
+}
+.type-container h2 {
+  text-align: left;
+}
+.type-container .description {
+  font-size: 1.6rem;
+  color: #373737;
+  font-weight: 100;
+}
+.type-container a {
+  text-decoration: none;
+  margin: 4% 0;
+  color: black;
+}
+.type-container .address {
+  margin-top: 10%;
+  font-size: 1.6rem;
 }
