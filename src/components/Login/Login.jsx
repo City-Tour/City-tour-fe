@@ -16,7 +16,7 @@ const Login = props => {
         console.log(res.data)
         user_id(res.data.user_id)
         localStorage.setItem('token', res.data.token)
-        // props.history.push('/packages')
+        props.history.push('/packages/add')
       })
       .catch(err => console.log(err))
   }
