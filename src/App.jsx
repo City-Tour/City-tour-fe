@@ -11,7 +11,7 @@ import NavBar from './components/NavBar/'
 import Login from './components/Login/'
 import SignUp from './components/Signup/';
 import CityPage from './components/CityPage/'
-import Packages from './components/Packages'
+import Packages from "./components/Packages";
 
 function App() {
 
@@ -29,7 +29,7 @@ function App() {
       <Route path='/login' component={Login}/> 
       <Route path='/signup' component={SignUp}/> 
       <Route path='/:id' component={CityPage}/>
-      <Route path="/packages" component={Packages} />
+      <Route path="/packages" component={Packages}/>
       </Switch>
       
       </Router>
