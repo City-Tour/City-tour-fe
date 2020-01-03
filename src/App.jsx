@@ -31,8 +31,8 @@ function App() {
             <Route path="/signup" component={SignUp} />
             <Route path ="/packages/add" component={AddPackage}/>
             <Route path="/user" component={User} />
-            <Route path="/:id" component={CityPage} />
             <Route path="/packages/:id" component={Packages} />
+            <Route path="/:id" component={CityPage} />
           </Switch>
         </Router>
       </AuthContext.Provider>
