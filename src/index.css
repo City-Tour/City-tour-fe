@@ -3,12 +3,12 @@ body {
     0deg,
     #a01839 0%,
     #c64343 23%,
-    #ffffff calc(20% + 1px),
-    #ffffff 60%,
-    #ffffff calc(60% + 1px),
-    #ffffff 70%,
-    #ffffff calc(70% + 1px),
-    #ffffff 100%
+    #fff calc(20% + 1px),
+    #fff 60%,
+    #fff calc(60% + 1px),
+    #fff 70%,
+    #fff calc(70% + 1px),
+    #fff 100%
   );
   margin: 0;
   padding: 0;

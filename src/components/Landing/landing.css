@@ -18,10 +18,7 @@ h2 {
 }
 .button-text {
   color: white;
-  &:hover {
-    color: white;
-  }
 }
-// .city-image {
-//   border-radius: 4rem;
-// }
+.button-text:hover {
+  color: white;
+}
