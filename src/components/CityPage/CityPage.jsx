@@ -1,31 +1,31 @@
-import React, { useEffect, useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import { Button } from "semantic-ui-react";
-import { axiosWithAuth } from "../../utils/axiosWithAuth";
-import "./CityPage.scss";
-import nashville from "../assets/Nashville_sunset.jpg";
-import sanFrancisco from "../assets/sanfrancisco_sunset.jpg";
-import austin from "../assets/Austin_sunset.jpg";
+import { Button } from 'semantic-ui-react'
+import { axiosWithAuth } from '../../utils/axiosWithAuth'
+import './CityPage.scss'
+import nashville from '../assets/Nashville_sunset.jpg'
+import sanFrancisco from '../assets/sanfrancisco_sunset.jpg'
+import austin from '../assets/Austin_sunset.jpg'
 
-const cities = ["", nashville, sanFrancisco, austin];
+const cities = ['', nashville, sanFrancisco, austin]
 
 const CityPage = props => {
-  const [cityPackages, setCityPackages] = useState([]);
+  const [cityPackages, setCityPackages] = useState([])
   useEffect(() => {
-    const city_id = props.match.params.id;
+    const city_id = props.match.params.id
 
     //Make Axios call with city_id to retrieve the packages per city
     axiosWithAuth()
       .get(`packages/city/${city_id}`)
       .then(res => {
-        setCityPackages(res.data);
-        console.log(res.data);
+        setCityPackages(res.data)
+        console.log(res.data)
       })
-      .catch(err => console.log(err.res));
-  }, [props.match.params.id]);
+      .catch(err => console.log(err.res))
+  }, [props.match.params.id])
 
-  console.log(cityPackages);
+  console.log(cityPackages)
 
   return (
     <div className="city-wrapper">
@@ -36,14 +36,14 @@ const CityPage = props => {
           <p>Package Type: {p.type}</p>
           <p>{p.price}</p>
           <Button size="massive" color="blue">
-            <Link className="button-text" to={`/packages/${p.name}`}>
+            <Link className="button-text" to={`/packages/${p.package_id}`}>
               View Package
             </Link>
           </Button>
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default CityPage;
+export default CityPage

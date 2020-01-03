@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "node-sass": "^4.13.0",
+    "prettier": "^1.19.1",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-hook-form": "^4.4.2",
@@ -14,6 +15,7 @@
     "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,scss,css,html,json,md,less,tsx}\"",
     "start": "react-scripts start",
     "dev": "BROWSER=none react-scripts start",
     "build": "react-scripts build",

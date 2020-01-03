@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import { Grid, Image, h2, Segment, Divider, Button } from "semantic-ui-react";
-import nashville from "../assets/nashville.jpg";
-import sanFrancisco from "../assets/SF.png";
-import austin from "../assets/austin.jpg";
-import "./landing.scss";
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { Grid, Image, h2, Segment, Divider, Button } from 'semantic-ui-react'
+import nashville from '../assets/nashville.jpg'
+import sanFrancisco from '../assets/SF.png'
+import austin from '../assets/austin.jpg'
+import './landing.scss'
 
-const cities = ["", nashville, sanFrancisco, austin];
+const cities = ['', nashville, sanFrancisco, austin]
 
 //Dynamic Render will require useEffect to fetch latest list of cities on render
 //Save list to useState and render, it will re-trigger render on component loads
@@ -15,17 +15,17 @@ const cities = ["", nashville, sanFrancisco, austin];
 //Each City button for view packages will use history props to swtich CityPage component by passing city_id as params
 
 const Landing = props => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("https://citytour2020.herokuapp.com/cities");
-      setData(result.data);
-    };
-    fetchData();
-  }, []);
+      const result = await axios('https://citytour2020.herokuapp.com/cities')
+      setData(result.data)
+    }
+    fetchData()
+  }, [])
 
-  console.log(data);
+  console.log(data)
 
   return (
     <>
@@ -146,7 +146,7 @@ const Landing = props => {
         </Grid> */}
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Landing;
+export default Landing
