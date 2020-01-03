@@ -7,16 +7,20 @@ import 'semantic-ui-css/semantic.min.css'
 //Importing Components
 import Landing from './components/Landing/'
 import NavBar from './components/NavBar/'
-
+import Login from './components/Login/'
 function App() {
   
 
   return (
+    <Router>
     <main>
-      
     <NavBar/>
-    <Landing/>
+    <Switch>
+    <Route exact path="/" component={Landing}/>
+    <Route path='/login' component={Login}/>    
+    </Switch>
     </main>
+    </Router>
   );
 }
 

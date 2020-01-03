@@ -19,9 +19,9 @@ const Landing = props => (
           </Grid.Column>
           <Grid.Column>
           <Segment className='city'>
-          <Image src={require("../assets/newyork.jpg")} className='city-image'/>
+          <Image src={require("../assets/boston.jpg")} className='city-image'/>
             <Header size="huge">
-              New York City
+              Boston
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
@@ -30,9 +30,9 @@ const Landing = props => (
           </Grid.Column>
           <Grid.Column>
           <Segment className='city'>
-          <Image src={require("../assets/newyork.jpg")} className='city-image'/>
+          <Image src={require("../assets/losangeles.jpg")} className='city-image'/>
             <Header size="huge">
-              New York City
+              Austin
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
@@ -44,9 +44,9 @@ const Landing = props => (
         <Grid.Row>
           <Grid.Column>
           <Segment className='city'>
-          <Image src={require("../assets/newyork.jpg")} className='city-image'/>
+          <Image src={require("../assets/nashville.jpg")} className='city-image'/>
             <Header size="huge">
-              New York City
+              Nashville
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
@@ -55,9 +55,9 @@ const Landing = props => (
           </Grid.Column>
           <Grid.Column>
           <Segment className='city'>
-          <Image src={require("../assets/newyork.jpg")} className='city-image'/>
+          <Image src={require("../assets/boston.jpg")} className='city-image'/>
             <Header size="huge">
-              New York City
+              Boston
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
@@ -66,9 +66,9 @@ const Landing = props => (
           </Grid.Column>
           <Grid.Column>
           <Segment className='city'>
-          <Image src={require("../assets/newyork.jpg")} className='city-image'/>
+          <Image src={require("../assets/losangeles.jpg")} className='city-image'/>
             <Header size="huge">
-              New York City
+             Austin
             </Header>
               Explore NYC like a true New Yorker. This tour includes food and places to visit.              <Divider section />
               <Header as="h3">Created by: City Tour Team</Header>
