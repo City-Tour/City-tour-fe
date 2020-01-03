@@ -4,7 +4,7 @@ import './App.scss'
 import { AuthContext } from './components/Contexts/AuthContext'
 import { axiosWithAuth } from './utils/axiosWithAuth'
 import PrivateRoute from './utils/PrivateRoute'
-
+//Zeit Update
 //Importing Components
 import Landing from './components/Landing/'
 import NavBar from './components/NavBar/'
