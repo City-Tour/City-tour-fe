@@ -17,8 +17,8 @@ const NavBar = props => {
       <section>
         <div className="account-login-logout">
           <Button.Group color="blue" basic>
-            <Button onClick={() => props.history.push('/user')}>
-              My account
+            <Button onClick={() => props.history.push('/packages/add')}>
+              Create Package
             </Button>
             <Button onClick={() => props.history.push('/login')}>
               Login / Sign Up
